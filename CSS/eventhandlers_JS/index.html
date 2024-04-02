@@ -8,6 +8,10 @@
         function displayDate(){
             document.getElementById("demo").innerHTML=Date()
         }
+        function mySelect(){
+            var x=document.getElementById("mySelect").value;
+            document.getElementById("location").innerHTML="Now You Are at "+x;
+        }
     </script>
 </head>
 <body>
@@ -21,5 +25,12 @@
 
     <p>Now time and date is <time id="demo"></time></p>
 
+    <select  id="mySelect" onchange="mySelect()">
+        <option value="Kopay">Kopay</option>
+        <option value="Jaffna">Jaffna</option>
+        <option value="Wattala">Wattala</option>
+        <option value="Dehiwela">Dehiwela</option>
+    </select>
+<p id="location"></p>
 </body>
 </html>
